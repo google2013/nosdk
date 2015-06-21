@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/Project_TK/!svn/ver/26938/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/build_android/tools
+END
+platform_property.sh
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/Project_TK/!svn/ver/26938/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/build_android/tools/platform_property.sh
+END
+file_list.sh
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Project_TK/!svn/ver/26890/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/build_android/tools/file_list.sh
+END
+platform_copy.sh
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/Project_TK/!svn/ver/26938/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/build_android/tools/platform_copy.sh
+END
+platform_define.sh
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/Project_TK/!svn/ver/26890/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/build_android/tools/platform_define.sh
+END
+platform_package.sh
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/Project_TK/!svn/ver/26938/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/build_android/tools/platform_package.sh
+END
+platform_path.sh
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/Project_TK/!svn/ver/26938/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/build_android/tools/platform_path.sh
+END
+resource_copy.sh
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/Project_TK/!svn/ver/26890/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/build_android/tools/resource_copy.sh
+END
+icon_copy.sh
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Project_TK/!svn/ver/26890/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/build_android/tools/icon_copy.sh
+END
+normal_define.sh
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/Project_TK/!svn/ver/26890/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/build_android/tools/normal_define.sh
+END
+platform_refresh.sh
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/Project_TK/!svn/ver/26890/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/build_android/tools/platform_refresh.sh
+END
+build_platform.sh
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/Project_TK/!svn/ver/26938/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/build_android/tools/build_platform.sh
+END
+platform_input.sh
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/Project_TK/!svn/ver/26938/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/build_android/tools/platform_input.sh
+END
+platform_param.sh
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/Project_TK/!svn/ver/26938/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/build_android/tools/platform_param.sh
+END
+build_native.sh
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/Project_TK/!svn/ver/26890/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/build_android/tools/build_native.sh
+END

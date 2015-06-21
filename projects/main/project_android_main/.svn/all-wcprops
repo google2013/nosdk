@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/Project_TK/!svn/ver/26942/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/.project
+END
+local.properties
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/local.properties
+END
+platform_copy.sh
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/platform_copy.sh
+END
+copy_resoure.sh
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/copy_resoure.sh
+END
+resource_copy.sh
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/resource_copy.sh
+END
+icon_copy.sh
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/icon_copy.sh
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Project_TK/!svn/ver/26942/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/build.xml
+END
+log.txt
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/log.txt
+END
+refreshmk.sh
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/refreshmk.sh
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/.classpath
+END
+project.properties
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/Project_TK/!svn/ver/26935/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/project.properties
+END
+ndkgdb.sh
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/ndkgdb.sh
+END
+lint.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/lint.xml
+END
+proguard-project.txt
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/proguard-project.txt
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Project_TK/!svn/ver/26935/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/AndroidManifest.xml
+END
+platform_package.sh
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/platform_package.sh
+END
+y
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/y
+END
+null
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/null
+END
+platform_refresh.sh
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/platform_refresh.sh
+END
+ant.properties
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/ant.properties
+END
+build_native.sh
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/Project_TK/!svn/ver/26894/project/branches/client_1_9_2_no_sdk/projects/ProjectTK/sgz15_source/build_native.sh
+END

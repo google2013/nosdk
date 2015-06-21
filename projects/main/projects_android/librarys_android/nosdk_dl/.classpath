@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry excluding="com/crimoon/common/CommonSdkManager.java|com/crimoon/common/ProjectTKApp.java|com/crimoon/common/ZZSDKManager.java|org/" kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="lib" path="libs/MobileSecSdk.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="lib" path="libs/alipaysdk.jar"/>
+	<classpathentry kind="lib" path="libs/downjoy_sdk_3.0.5.jar"/>
+	<classpathentry kind="lib" path="libs/ipp-rome-2.1.0.jar"/>
+	<classpathentry kind="lib" path="libs/picasso-2.2.0.jar"/>
+	<classpathentry kind="lib" path="libs/trobotexternalinterface.jar"/>
+	<classpathentry kind="lib" path="libs/UPPayAssistEx.jar"/>
+	<classpathentry kind="lib" path="libs/UPPayPluginEx.jar"/>
+	<classpathentry kind="lib" path="libs/utdid4all-1.0.2.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

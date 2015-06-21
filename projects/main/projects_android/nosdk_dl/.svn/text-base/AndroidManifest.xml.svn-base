@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="net.crimoon.sgz15.dl"
+      android:versionCode="193"
+      android:versionName="1.9.3">
+
+    <uses-sdk android:minSdkVersion="8"/>
+    <uses-feature android:glEsVersion="0x00020000" />
+
+    <application android:label="@string/app_name"
+        android:icon="@drawable/icon"
+        >
+
+     <meta-data  android:name="CRIMOON_CHANNEL" android:value="channel_value"/>
+        <activity android:name="com.crimoon.common.ProjectTK"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait"           
+                  android:theme="@style/style_ld_launcher"
+                  android:configChanges="orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+  		  android:name="com.tencent.weibo.webview.OAuthV2AuthorizeWebView"
+  		  android:label="@string/app_name" >
+		</activity> 
+         <activity
+            android:name="net.crimoon.sgz15.dl.wxapi.WXEntryActivity"
+            android:label="@string/app_name" 
+            android:exported ="true"
+            >
+		</activity> 
+		<!-- 当乐sdk -->
+        <activity
+            android:name="com.downjoy.hj.sdk.AnotherActivity"
+            android:configChanges="orientation|keyboardHidden" />
+        <activity
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:name="com.downjoy.activity.SdkActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/dcn_Activity_Transparent" />
+        <!--UPPay sdk begin -->
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!--UPPay sdk end -->
+        <!--alipay sdk begin -->
+
+        <activity
+            android:name="com.alipay.android.mini.window.sdk.MiniPayActivity"
+            android:configChanges="orientation"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:label="@string/msp_app_name"
+            android:launchMode="singleTop"
+            android:process="com.alipay.sdk"
+            android:screenOrientation="portrait"
+            android:theme="@style/MspAppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+            <intent-filter android:priority="800" >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.alipay.android.mini.window.sdk.MiniWebActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:process="com.alipay.sdk"
+            android:theme="@style/MspAppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <service android:name="com.alipay.android.app.MspService"
+            android:process="com.alipay.sdk"
+            android:exported="false" >
+            <intent-filter android:priority="800" />
+        </service>
+        <!--alipay sdk end -->
+        <!-- Polling Service -->
+        <service android:name="com.downjoy.service.PollingService">
+            <intent-filter>
+                <action android:name="action.downjoy.polling.service" />
+            </intent-filter>
+        </service>
+        <!-- 当乐sdk -->
+         <receiver
+        	android:name="com.tencent.mm.sdk.plugin.MMPluginOAuth$Receiver" 
+        	android:permission="com.tencent.mm.oauth.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.tencent.mm.sdk.plugin.Intent.ACTION_RESPONSE" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver
+            android:name="com.tencent.mm.sdk.channel.MMessage$Receiver"
+            android:permission="com.tencent.mm.plugin.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.tencent.mm.sdk.channel.Intent.ACTION_MESSAGE" />
+            </intent-filter>
+        </receiver>
+	  <service  android:process=":PushService" android:name="com.crimoon.common.PushService"></service>
+	      
+    </application>
+    <supports-screens android:largeScreens="true"
+                      android:smallScreens="true"
+                      android:anyDensity="true"
+                      android:normalScreens="true"/>
+     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	 <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />	 
+	 <!-- 当乐sdk -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- ali -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+	 <!-- 当乐sdk -->
+	 <!-- 加入在SDCard中创建与删除文件的权限 -->
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+	<!-- 加入在SDCard中写入数据的权限 -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+	<uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+     <permission
+        android:name="net.crimoon.sgz15.dl.permission.MMOAUTH_CALLBACK"
+      />
+    <permission
+        android:name="net.crimoon.sgz15.dl.permission.MM_MESSAGE"
+     />
+        <uses-permission android:name="net.crimoon.sgz15.dl.permission.MMOAUTH_CALLBACK" />
+    <uses-permission android:name="net.crimoon.sgz15.dl.permission.MM_MESSAGE" />
+     <supports-screens
+        android:anyDensity="true"
+        android:resizeable="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+   	    android:xlargeScreens="true"
+        android:smallScreens="true" />    
+</manifest> 

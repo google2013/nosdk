@@ -2,6 +2,7 @@
 #include "GameOverScene.h"
 #include "SimpleAudioEngine.h"
 #include "PayBackScene.h"
+#include "SettingScene.h"
 
 using namespace cocos2d;
 
@@ -134,14 +135,19 @@ bool HelloWorld::init()
 void HelloWorld::menuCloseCallback(CCObject* pSender)
 {
 	// "close" menu item clicked
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT) || (CC_TARGET_PLATFORM == CC_PLATFORM_WP8)
-    CCMessageBox("You pressed the close button. Windows Store Apps do not implement a close button.", "Alert");
-#else
-    CCDirector::sharedDirector()->end();
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    exit(0);
-#endif
-#endif
+//#if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT) || (CC_TARGET_PLATFORM == CC_PLATFORM_WP8)
+//    CCMessageBox("You pressed the close button. Windows Store Apps do not implement a close button.", "Alert");
+//#else
+//    CCDirector::sharedDirector()->end();
+//#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+//    exit(0);
+//#endif
+//#endif
+    // "close" menu item clicked
+    CCScene* pScene = SettingScene::scene();
+    CCDirector *pDirector = CCDirector::sharedDirector();
+    // run
+    pDirector->replaceScene(pScene);
 }
 
 void HelloWorld::menuPayCallback(CCObject* pSender)

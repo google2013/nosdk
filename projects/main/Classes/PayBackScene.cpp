@@ -68,50 +68,57 @@ bool PayBackScene::init()
         // 1. Add a menu item with "X" image, which is clicked to quit the program.
         
         // Create a "close" menu item with close icon, it's an auto release object.
-        
+        float num = 5;
+        int margin = 1;
         CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
         CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
+        char buf[1024];
+        for( int i = 0 ; i < num ; i++)
+        {
+            /* 正常状态下的按钮图片 */
+            CCScale9Sprite* btnNormal = CCScale9Sprite::create("control_normal.png");
+            
+            /* 点击状态下的按钮图片 */
+            CCScale9Sprite* btnDown = CCScale9Sprite::create("control_selected.png");
+            
+            sprintf( buf , "充值%d元" , ((int)num - 1 - i) * 10 + 1 );
+            /* 按钮标题 */
+            CCLabelTTF *title = CCLabelTTF::create( buf , "Marker Felt", 30);
+            
+            /* 按钮的大小会根据标题自动调整 */
+            CCControlButton* controlBtn = CCControlButton::create(title, btnNormal);
+            
+            /* 设置按钮按下时的图片 */
+            controlBtn->setBackgroundSpriteForState(btnDown, CCControlStateSelected);
+            controlBtn->setPosition(ccp(origin.x + visibleSize.width / 2,
+                                        origin.y + visibleSize.height / 2 + btnNormal->getContentSize().height * margin * num / 2 - btnNormal->getContentSize().height * margin * ( num - i - 1 ) ));
+            controlBtn->setTag( ((int)num - 1 - i) * 10 + 1 );
+            controlBtn->addTargetWithActionForControlEvents( this , cccontrol_selector(PayBackScene::menuPayCallback), CCControlEventTouchDown );
+            
+            this->addChild(controlBtn);
+            
+        }
         
-        CCMenuItemImage *pCloseItem = CCMenuItemImage::create(
-                                                              "CloseNormal.png",
-                                                              "CloseSelected.png",
-                                                              this,
-                                                              menu_selector(PayBackScene::menuPayCallback));
-        CC_BREAK_IF(! pCloseItem);
+        /* 正常状态下的按钮图片 */
+        CCScale9Sprite* btnNormal = CCScale9Sprite::create("control_normal.png");
         
-        // Place the menu item bottom-right conner.
+        /* 点击状态下的按钮图片 */
+        CCScale9Sprite* btnDown = CCScale9Sprite::create("control_selected.png");
         
-        pCloseItem->setPosition(ccp(origin.x + visibleSize.width / 2 - pCloseItem->getContentSize().width/2,
-                                    origin.y + visibleSize.height / 2 - pCloseItem->getContentSize().height/2));
+        /* 按钮标题 */
+        CCLabelTTF *title = CCLabelTTF::create( "返回" , "Marker Felt", 30);
         
-        // Create a menu with the "close" menu item, it's an auto release object.
-        CCMenu* pMenu = CCMenu::create(pCloseItem, NULL);
-        pMenu->setPosition(CCPointZero);
-        CC_BREAK_IF(! pMenu);
+        /* 按钮的大小会根据标题自动调整 */
+        CCControlButton* controlBtn = CCControlButton::create(title, btnNormal);
         
-        // Add the menu to PayBackScene layer as a child layer.
-        this->addChild(pMenu, 1);
+        /* 设置按钮按下时的图片 */
+        controlBtn->setBackgroundSpriteForState(btnDown, CCControlStateSelected);
+        controlBtn->setPosition(ccp(origin.x + visibleSize.width / 2,
+                                    origin.y + visibleSize.height / 2 + btnNormal->getContentSize().height * margin * num / 2 - btnNormal->getContentSize().height * margin * ( num ) ));
+//        controlBtn->setTag( ((int)num - 1 - i) * 10 + 1 );
+        controlBtn->addTargetWithActionForControlEvents( this , cccontrol_selector(PayBackScene::menuBackCallback), CCControlEventTouchDown );
         
-        /////////////////////////////
-        // 2. add your codes below...
-        //        CCSprite *player = CCSprite::create("Player.png", CCRectMake(0, 0, 27, 40) );
-        //
-        //        player->setPosition( ccp(origin.x + player->getContentSize().width/2,
-        //                                 origin.y + visibleSize.height/2) );
-        //        this->addChild(player);
-        //
-        //        this->schedule( schedule_selector(PayBackScene::gameLogic), 1.0 );
-        //
-        //        this->setTouchEnabled(true);
-        //
-        //        _targets = new CCArray;
-        //        _projectiles = new CCArray;
-        //
-        //        // use updateGame instead of update, otherwise it will conflit with SelectorProtocol::update
-        //        // see http://www.cocos2d-x.org/boards/6/topics/1478
-        //        this->schedule( schedule_selector(PayBackScene::updateGame) );
-        //
-        //        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("background-music-aac.wav", true);
+        this->addChild(controlBtn);
         
         bRet = true;
     } while (0);
@@ -119,8 +126,21 @@ bool PayBackScene::init()
     return bRet;
 }
 
-void PayBackScene::menuPayCallback(CCObject* pSender)
+void PayBackScene::menuPayCallback(cocos2d::CCObject* pSender, cocos2d::extension::CCControlEvent event)
 {
 //    char buf[1024];
-    NS_SDKFactory::getInstance()->getSDKPlatform()->setPay( 1 );
+    CCControlButton* btn = (CCControlButton*)pSender;
+    if( btn )
+    {
+        NS_SDKFactory::getInstance()->getSDKPlatform()->setPay( btn->getTag() );
+    }
+}
+
+void PayBackScene::menuBackCallback(cocos2d::CCObject* pSender)
+{
+    //    char buf[1024];
+    CCDirector *pDirector = CCDirector::sharedDirector();
+    CCScene *pScene = HelloWorld::scene();
+    // run
+    pDirector->replaceScene(pScene);
 }

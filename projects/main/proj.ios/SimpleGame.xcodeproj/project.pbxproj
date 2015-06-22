@@ -51,6 +51,9 @@
 		186A68331B37AB50002AF9A6 /* libwebsockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 186A68321B37AB50002AF9A6 /* libwebsockets.a */; };
 		186A68351B37AB68002AF9A6 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 186A68341B37AB68002AF9A6 /* libcurl.a */; };
 		186A68371B37ABE8002AF9A6 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 186A68361B37ABE8002AF9A6 /* libsqlite3.dylib */; };
+		18B1EADB1B383F6B003201A8 /* SettingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B1EADA1B383F6B003201A8 /* SettingScene.cpp */; };
+		18B1EADE1B3849CA003201A8 /* control_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1EADC1B3849CA003201A8 /* control_normal.png */; };
+		18B1EADF1B3849CA003201A8 /* control_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1EADD1B3849CA003201A8 /* control_selected.png */; };
 		18B634BE1B370A6E007B2926 /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B6342D1B370A6E007B2926 /* CDAudioManager.m */; };
 		18B634BF1B370A6E007B2926 /* CDOpenALSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B634301B370A6E007B2926 /* CDOpenALSupport.m */; };
 		18B634C01B370A6E007B2926 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B634321B370A6E007B2926 /* CocosDenshion.m */; };
@@ -203,6 +206,10 @@
 		186A68321B37AB50002AF9A6 /* libwebsockets.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebsockets.a; path = ../../../external/libwebsockets/ios/lib/libwebsockets.a; sourceTree = "<group>"; };
 		186A68341B37AB68002AF9A6 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		186A68361B37ABE8002AF9A6 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		18B1EAD91B383F5F003201A8 /* SettingScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingScene.h; sourceTree = "<group>"; };
+		18B1EADA1B383F6B003201A8 /* SettingScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingScene.cpp; sourceTree = "<group>"; };
+		18B1EADC1B3849CA003201A8 /* control_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = control_normal.png; sourceTree = "<group>"; };
+		18B1EADD1B3849CA003201A8 /* control_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = control_selected.png; sourceTree = "<group>"; };
 		18B634011B370912007B2926 /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = ../../../cocos2dx/proj.ios/cocos2dx.xcodeproj; sourceTree = "<group>"; };
 		18B634291B370A6E007B2926 /* Export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Export.h; sourceTree = "<group>"; };
 		18B6342A1B370A6E007B2926 /* SimpleAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine.h; sourceTree = "<group>"; };
@@ -546,6 +553,8 @@
 		784521C214EBA449009D533B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				18B1EADC1B3849CA003201A8 /* control_normal.png */,
+				18B1EADD1B3849CA003201A8 /* control_selected.png */,
 				D4E6BCC415FCB6AA008BF525 /* background-music-aac.wav */,
 				D4E6BCC515FCB6AA008BF525 /* hd */,
 				D4E6BCC615FCB6AA008BF525 /* pew-pew-lei.wav */,
@@ -576,6 +585,8 @@
 				186A65C61B37A3CC002AF9A6 /* LoginBackScene.cpp */,
 				186A65C81B37A3DD002AF9A6 /* PayBackScene.cpp */,
 				186A65CA1B37A3F5002AF9A6 /* PayBackScene.h */,
+				18B1EAD91B383F5F003201A8 /* SettingScene.h */,
+				18B1EADA1B383F6B003201A8 /* SettingScene.cpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -663,12 +674,14 @@
 			files = (
 				782F4619153FEDF0009FC2E5 /* Default.png in Resources */,
 				D4EF94E815BD319200D803EB /* Icon-57.png in Resources */,
+				18B1EADE1B3849CA003201A8 /* control_normal.png in Resources */,
 				D4EF94EA15BD319500D803EB /* Icon-114.png in Resources */,
 				D4EF94EC15BD319B00D803EB /* Icon-72.png in Resources */,
 				D4EF94EE15BD319D00D803EB /* Icon-144.png in Resources */,
 				D4E6BCC815FCB6AA008BF525 /* background-music-aac.wav in Resources */,
 				D4E6BCC915FCB6AA008BF525 /* hd in Resources */,
 				D4E6BCCA15FCB6AA008BF525 /* pew-pew-lei.wav in Resources */,
+				18B1EADF1B3849CA003201A8 /* control_selected.png in Resources */,
 				D4E6BCCB15FCB6AA008BF525 /* sd in Resources */,
 				D41A0AC6160F14F5004552AE /* Default-568h@2x.png in Resources */,
 				D446FD47161020AC000ADA7B /* Default@2x.png in Resources */,
@@ -695,6 +708,7 @@
 				186A67821B37A892002AF9A6 /* CCControlButtonLoader.cpp in Sources */,
 				186A67FC1B37A892002AF9A6 /* WebSocket.cpp in Sources */,
 				186A67EC1B37A892002AF9A6 /* CCEditBox.cpp in Sources */,
+				18B1EADB1B383F6B003201A8 /* SettingScene.cpp in Sources */,
 				186A677A1B37A892002AF9A6 /* AssetsManager.cpp in Sources */,
 				186A67881B37A892002AF9A6 /* CCLayerGradientLoader.cpp in Sources */,
 				186A67F51B37A892002AF9A6 /* CCScrollView.cpp in Sources */,

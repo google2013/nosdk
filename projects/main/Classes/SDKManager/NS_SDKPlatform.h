@@ -22,6 +22,8 @@ public:
     
     void showCenter();
     void showBBS();
+    void showFloatWindow();
+    void hideFloatWindow();
     
     bool isGuest();
     bool isLogined();

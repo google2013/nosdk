@@ -67,29 +67,54 @@ bool LoginBackScene::init()
         // 1. Add a menu item with "X" image, which is clicked to quit the program.
         
         // Create a "close" menu item with close icon, it's an auto release object.
+        int num = 1;
+        int margin = 1;
+        int i = 0;
         
         CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
         CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
+
+        /* 正常状态下的按钮图片 */
+        CCScale9Sprite* btnNormal = CCScale9Sprite::create("control_normal.png");
         
-        CCMenuItemImage *pCloseItem = CCMenuItemImage::create(
-                                                              "CloseNormal.png",
-                                                              "CloseSelected.png",
-                                                              this,
-                                                              menu_selector(LoginBackScene::menuLoginCallback));
-        CC_BREAK_IF(! pCloseItem);
+        /* 点击状态下的按钮图片 */
+        CCScale9Sprite* btnDown = CCScale9Sprite::create("control_selected.png");
         
-        // Place the menu item bottom-right conner.
+        std::string titleStr = "登录";
+        /* 按钮标题 */
+        CCLabelTTF *title = CCLabelTTF::create( titleStr.c_str() , "Marker Felt", 30);
         
-        pCloseItem->setPosition(ccp(origin.x + visibleSize.width / 2 - pCloseItem->getContentSize().width/2,
-                                    origin.y + visibleSize.height / 2 - pCloseItem->getContentSize().height/2));
+        /* 按钮的大小会根据标题自动调整 */
+        CCControlButton* controlBtn = CCControlButton::create(title, btnNormal);
         
-        // Create a menu with the "close" menu item, it's an auto release object.
-        CCMenu* pMenu = CCMenu::create(pCloseItem, NULL);
-        pMenu->setPosition(CCPointZero);
-        CC_BREAK_IF(! pMenu);
+        /* 设置按钮按下时的图片 */
+        controlBtn->setBackgroundSpriteForState(btnDown, CCControlStateSelected);
+        controlBtn->setPosition(ccp(origin.x + visibleSize.width / 2,
+                                    origin.y + visibleSize.height / 2 + btnNormal->getContentSize().height * margin * num / 2 - btnNormal->getContentSize().height * margin * ( num - i ) ));
         
-        // Add the menu to LoginBackScene layer as a child layer.
-        this->addChild(pMenu, 1);
+        controlBtn->addTargetWithActionForControlEvents( this , cccontrol_selector(LoginBackScene::menuLoginCallback), CCControlEventTouchDown );
+        
+        this->addChild(controlBtn);
+
+//        CCMenuItemImage *pCloseItem = CCMenuItemImage::create(
+//                                                              "CloseNormal.png",
+//                                                              "CloseSelected.png",
+//                                                              this,
+//                                                              menu_selector(LoginBackScene::menuLoginCallback));
+//        CC_BREAK_IF(! pCloseItem);
+//        
+//        // Place the menu item bottom-right conner.
+//        
+//        pCloseItem->setPosition(ccp(origin.x + visibleSize.width / 2 - pCloseItem->getContentSize().width/2,
+//                                    origin.y + visibleSize.height / 2 - pCloseItem->getContentSize().height/2));
+//        
+//        // Create a menu with the "close" menu item, it's an auto release object.
+//        CCMenu* pMenu = CCMenu::create(pCloseItem, NULL);
+//        pMenu->setPosition(CCPointZero);
+//        CC_BREAK_IF(! pMenu);
+//        
+//        // Add the menu to LoginBackScene layer as a child layer.
+//        this->addChild(pMenu, 1);
         
         /////////////////////////////
         // 2. add your codes below...

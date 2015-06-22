@@ -49,6 +49,16 @@ void NS_SDKPlatform::showBBS()
     
 }
 
+void NS_SDKPlatform::showFloatWindow()
+{
+    
+}
+
+void NS_SDKPlatform::hideFloatWindow()
+{
+    
+}
+
 bool NS_SDKPlatform::isGuest()
 {
     

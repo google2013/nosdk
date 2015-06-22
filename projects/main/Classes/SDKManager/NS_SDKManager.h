@@ -18,7 +18,7 @@ public:
     
     void goNativeLogin( const char* str );
     void getLoginInfo(const char* str);
-    void getPayInfo(const char* str);
+    void getPayInfo(float amount);
     
     void onLoginSuccess();
     void onPaySuccess();

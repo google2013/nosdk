@@ -17,7 +17,7 @@ public:
     
     void goLogin();
     void goLogout();
-    void setPay( std::string json );
+    void setPay( int type );
     void logout();
     
     void showCenter();

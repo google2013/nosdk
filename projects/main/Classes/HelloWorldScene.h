@@ -20,7 +20,7 @@ public:
 
 	// a selector callback
 	virtual void menuCloseCallback(cocos2d::CCObject* pSender);
-
+	virtual void menuPayCallback(cocos2d::CCObject* pSender);
 	// implement the "static node()" method manually
 	CREATE_FUNC(HelloWorld);
 

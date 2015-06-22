@@ -1,6 +1,7 @@
 #include "HelloWorldScene.h"
 #include "GameOverScene.h"
 #include "SimpleAudioEngine.h"
+#include "PayBackScene.h"
 
 using namespace cocos2d;
 
@@ -67,7 +68,9 @@ bool HelloWorld::init()
 		//////////////////////////////////////////////////////////////////////////
 
 		// 1. Add a menu item with "X" image, which is clicked to quit the program.
-
+        // Place the menu item bottom-right conner.
+        CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
+        CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
 		// Create a "close" menu item with close icon, it's an auto release object.
 		CCMenuItemImage *pCloseItem = CCMenuItemImage::create(
 			"CloseNormal.png",
@@ -75,10 +78,6 @@ bool HelloWorld::init()
 			this,
 			menu_selector(HelloWorld::menuCloseCallback));
 		CC_BREAK_IF(! pCloseItem);
-        
-		// Place the menu item bottom-right conner.
-        CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
-        CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
         
 		pCloseItem->setPosition(ccp(origin.x + visibleSize.width - pCloseItem->getContentSize().width/2,
                                     origin.y + pCloseItem->getContentSize().height/2));
@@ -88,9 +87,23 @@ bool HelloWorld::init()
 		pMenu->setPosition(CCPointZero);
 		CC_BREAK_IF(! pMenu);
 
+        CCMenuItemImage *pPayItem = CCMenuItemImage::create(
+                                                              "CloseNormal.png",
+                                                              "CloseSelected.png",
+                                                              this,
+                                                              menu_selector(HelloWorld::menuPayCallback));
+        CC_BREAK_IF(! pPayItem);
+        
+        pPayItem->setPosition(ccp(origin.x + visibleSize.width - pPayItem->getContentSize().width*1.5,
+                                    origin.y + pPayItem->getContentSize().height/2));
+        
+        // Create a menu with the "close" menu item, it's an auto release object.
+        CCMenu* pMenu2 = CCMenu::create(pPayItem, NULL);
+        pMenu2->setPosition(CCPointZero);
+        CC_BREAK_IF(! pMenu2);
 		// Add the menu to HelloWorld layer as a child layer.
 		this->addChild(pMenu, 1);
-
+		this->addChild(pMenu2, 1);
 		/////////////////////////////
 		// 2. add your codes below...
 		CCSprite *player = CCSprite::create("Player.png", CCRectMake(0, 0, 27, 40) );
@@ -129,6 +142,15 @@ void HelloWorld::menuCloseCallback(CCObject* pSender)
     exit(0);
 #endif
 #endif
+}
+
+void HelloWorld::menuPayCallback(CCObject* pSender)
+{
+    // "close" menu item clicked
+    CCScene* pScene = PayBackScene::scene();
+    CCDirector *pDirector = CCDirector::sharedDirector();
+    // run
+    pDirector->replaceScene(pScene);
 }
 
 // cpp with cocos2d-x

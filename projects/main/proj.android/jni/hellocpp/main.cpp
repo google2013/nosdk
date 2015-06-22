@@ -44,14 +44,10 @@ void Java_org_cocos2dx_lib_Cocos2dxRenderer_nativeInit(JNIEnv*  env, jobject thi
     }
 }
 void Java_org_nosdk_main_CommonSDKManager_login(JNIEnv* env, jobject thiz,jstring prompt){
-	char buf[1024];
-	const char *str = env->GetStringUTFChars(env, prompt, 0);
-//	char *strid = JavaCppHelper::getInstance()->jstringTostring(env,str);
+	std::string str = JniHelper::jstring2string(prompt);
     CCScene *scene = CCDirector::sharedDirector()->getRunningScene();
-    CCAction *action = CCCallFuncO::create(NS_SDKFactory::getInstance()->getSDKPlatform(),callfuncO_selector(NS_SDKManager::goNativeLogin),CCString::create(strid));
+    CCAction *action = CCCallFuncO::create(NS_SDKFactory::getInstance()->getSDKPlatform(),callfuncO_selector(NS_SDKManager::goNativeLogin),CCString::create(str.c_str()));
     scene->runAction(action);
-	env->ReleaseStringUTFChars(env, prompt, str);
-//    CC_SAFE_DELETE_ARRAY(strid);
 }
 
 void Java_org_nosdk_main_CommonSDKManager_logout(JNIEnv* env, jobject thiz){

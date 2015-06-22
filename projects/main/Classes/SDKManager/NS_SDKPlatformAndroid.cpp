@@ -29,7 +29,7 @@ void NS_SDKPlatform::goLogout()
     
 }
 
-void NS_SDKPlatform::setPay( std::string json )
+void NS_SDKPlatform::setPay( int type )
 {
     
 }

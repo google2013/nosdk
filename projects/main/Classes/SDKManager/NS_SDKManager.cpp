@@ -28,7 +28,7 @@ void NS_SDKManager::getLoginInfo(const char* str)
     
 }
 
-void NS_SDKManager::getPayInfo(const char* str)
+void NS_SDKManager::getPayInfo(float amount)
 {
     
 }

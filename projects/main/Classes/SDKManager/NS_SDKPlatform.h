@@ -35,7 +35,8 @@ public:
     
 private:
     void callStringFunc( char* json , char* funcName );
-    void callVoidFunc( char* json , char* funcName );
-    void callBoolFunc( char* json , char* funcName );
-    void callIntFunc( char* json , char* funcName );
+    void callStringFunc2( char* funcName , const char* result);
+    void callVoidFunc(  char* funcName );
+    bool callBoolFunc(  char* funcName );
+    int callIntFunc( char* funcName );
 };

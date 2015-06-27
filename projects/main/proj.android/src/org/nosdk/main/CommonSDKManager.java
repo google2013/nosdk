@@ -7,7 +7,7 @@ import android.util.Log;
 import com.nosdk.common.ILoginCallback;
 import com.nosdk.common.SDKManager;
 
-public class CommonSDKManager {
+public class CommonSDKManager extends Object{
 	private final int MSG_LOGIN = 0;
 	
 	private static CommonSDKManager instance = null;

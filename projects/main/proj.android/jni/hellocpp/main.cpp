@@ -6,6 +6,7 @@
 #include <android/log.h>
 #include "NS_SDKFactory.h"
 #include "NS_SDKManager.h"
+#include "Common/JavaHelper.h"
 
 #define  LOG_TAG    "main"
 #define  LOGD(...)  __android_log_print(ANDROID_LOG_DEBUG,LOG_TAG,__VA_ARGS__)
@@ -24,7 +25,8 @@ jint JNI_OnLoad(JavaVM *vm, void *reserved)
 
 void Java_org_cocos2dx_lib_Cocos2dxRenderer_nativeInit(JNIEnv*  env, jobject thiz, jint w, jint h)
 {
-    CCUserDefault::sharedUserDefault()->setStringForKey("PACKEAGE","com/crimoon/common/");
+    CCUserDefault::sharedUserDefault()->setStringForKey("PACKEAGE","com/nosdk/main/");
+    JavaHelper::getInstance()->setJNIEnv( env );
     if (!CCDirector::sharedDirector()->getOpenGLView())
     {
         CCEGLView *view = CCEGLView::sharedOpenGLView();

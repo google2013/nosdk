@@ -11,15 +11,13 @@ PlatformGameName=(
 "NAME_SGZ15"
 )
 
-EXINCLUDE_SRC=(
-"WeChatSDkManager.java"
-)
-
 if [ "$ALL" != "1" ] && [ "$ALL" != "0" ]; then
     source ../tools/platform_path.sh
-	ISREFRESHMK_SET="0"
-	ISBUILD_SET="0"
-	ISCOPYRESOURCE_SET="0"
+    ISBUILD_SET="0"    
+    ISREFRESHMK_SET="0"          
+    ISCOPYRESOURCE_SET="0"           
+    ISCOPYICON_SET="0"            
+    ISPACKAGE_SET="0" 
     ##使用自定义设置
     PLATFORMHONE_CHILD=(
     "DEBUG"         ##编译模式

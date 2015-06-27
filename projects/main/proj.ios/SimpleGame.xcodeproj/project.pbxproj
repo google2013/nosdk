@@ -63,6 +63,7 @@
 		18B635021B370CB4007B2926 /* NS_SDKFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B635011B370CB4007B2926 /* NS_SDKFactory.cpp */; };
 		18B635081B370FAE007B2926 /* NS_SDKManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B635071B370FAE007B2926 /* NS_SDKManager.cpp */; };
 		18B6350A1B371196007B2926 /* NS_SDKPlatformAndroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B635091B371196007B2926 /* NS_SDKPlatformAndroid.cpp */; };
+		18D5BAE91B398D1F008387B7 /* JavaHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18D5BAE81B398D1F008387B7 /* JavaHelper.cpp */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
@@ -229,6 +230,8 @@
 		18B635061B370F9F007B2926 /* NS_SDKManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NS_SDKManager.h; sourceTree = "<group>"; };
 		18B635071B370FAE007B2926 /* NS_SDKManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NS_SDKManager.cpp; sourceTree = "<group>"; };
 		18B635091B371196007B2926 /* NS_SDKPlatformAndroid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NS_SDKPlatformAndroid.cpp; sourceTree = "<group>"; };
+		18D5BAE81B398D1F008387B7 /* JavaHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JavaHelper.cpp; sourceTree = "<group>"; };
+		18D5BAEA1B398D2D008387B7 /* JavaHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JavaHelper.h; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* SimpleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -507,6 +510,15 @@
 			path = SDKManager;
 			sourceTree = "<group>";
 		};
+		18D5BAE41B398A21008387B7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				18D5BAE81B398D1F008387B7 /* JavaHelper.cpp */,
+				18D5BAEA1B398D2D008387B7 /* JavaHelper.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,6 +586,7 @@
 		BF23D4E2143315EB00657E08 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				18D5BAE41B398A21008387B7 /* Common */,
 				18B635001B370C92007B2926 /* SDKManager */,
 				BF23D4E3143315EB00657E08 /* AppDelegate.cpp */,
 				BF23D4E4143315EB00657E08 /* AppDelegate.h */,
@@ -739,6 +752,7 @@
 				186A67851B37A892002AF9A6 /* CCLabelBMFontLoader.cpp in Sources */,
 				186A67861B37A892002AF9A6 /* CCLabelTTFLoader.cpp in Sources */,
 				BF23D4E8143315EB00657E08 /* HelloWorldScene.cpp in Sources */,
+				18D5BAE91B398D1F008387B7 /* JavaHelper.cpp in Sources */,
 				186A678A1B37A892002AF9A6 /* CCMenuItemImageLoader.cpp in Sources */,
 				18B634C11B370A6E007B2926 /* SimpleAudioEngine.mm in Sources */,
 				186A67811B37A892002AF9A6 /* CCBValue.cpp in Sources */,

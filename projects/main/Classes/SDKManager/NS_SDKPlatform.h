@@ -34,8 +34,8 @@ public:
     const char* getProjectID();
     
 private:
-    void callStringFunc( char* json );
-    void callVoidFunc( char* json );
-    void callBoolFunc( char* json );
-    void callIntFunc( char* json );
+    void callStringFunc( char* json , char* funcName );
+    void callVoidFunc( char* json , char* funcName );
+    void callBoolFunc( char* json , char* funcName );
+    void callIntFunc( char* json , char* funcName );
 };

@@ -1,13 +1,5 @@
 # nomal_opts_act()
 # {
-ISBUILD_SET="0"
-ISREFRESHMK_SET="0"      
-ISCOPYRESOURCE_SET="0"       
-ISCOPYICON_SET="0"        
-ISPACKAGE_SET="0"         
-
-    echo -e "\n### nomal_opts_act ###\n"
-
     while [ -n "$1" ]
     do
     case "$1" in 

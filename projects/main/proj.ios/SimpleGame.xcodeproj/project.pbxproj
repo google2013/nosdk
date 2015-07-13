@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186A45FF1B53A26400C777E7 /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 186A45F81B53A26400C777E7 /* json_internalarray.inl */; };
+		186A46001B53A26400C777E7 /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 186A45F91B53A26400C777E7 /* json_internalmap.inl */; };
+		186A46011B53A26400C777E7 /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 186A45FA1B53A26400C777E7 /* json_reader.cpp */; };
+		186A46021B53A26400C777E7 /* json_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 186A45FB1B53A26400C777E7 /* json_value.cpp */; };
+		186A46031B53A26400C777E7 /* json_valueiterator.inl in Resources */ = {isa = PBXBuildFile; fileRef = 186A45FC1B53A26400C777E7 /* json_valueiterator.inl */; };
+		186A46041B53A26400C777E7 /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 186A45FD1B53A26400C777E7 /* json_writer.cpp */; };
+		186A46051B53A26400C777E7 /* sconscript in Resources */ = {isa = PBXBuildFile; fileRef = 186A45FE1B53A26400C777E7 /* sconscript */; };
+		186A46071B53AEBC00C777E7 /* NS_SDKPlatform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 186A46061B53AEBC00C777E7 /* NS_SDKPlatform.cpp */; };
 		186A65C71B37A3CC002AF9A6 /* LoginBackScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 186A65C61B37A3CC002AF9A6 /* LoginBackScene.cpp */; };
 		186A65C91B37A3DD002AF9A6 /* PayBackScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 186A65C81B37A3DD002AF9A6 /* PayBackScene.cpp */; };
 		186A677A1B37A892002AF9A6 /* AssetsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 186A65CE1B37A892002AF9A6 /* AssetsManager.cpp */; };
@@ -62,7 +70,6 @@
 		18B634FF1B370AEA007B2926 /* libcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B634061B370913007B2926 /* libcocos2dx.a */; };
 		18B635021B370CB4007B2926 /* NS_SDKFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B635011B370CB4007B2926 /* NS_SDKFactory.cpp */; };
 		18B635081B370FAE007B2926 /* NS_SDKManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B635071B370FAE007B2926 /* NS_SDKManager.cpp */; };
-		18B6350A1B371196007B2926 /* NS_SDKPlatformAndroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B635091B371196007B2926 /* NS_SDKPlatformAndroid.cpp */; };
 		18D5BAE91B398D1F008387B7 /* JavaHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18D5BAE81B398D1F008387B7 /* JavaHelper.cpp */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -111,6 +118,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		186A45ED1B53A26400C777E7 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
+		186A45EE1B53A26400C777E7 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		186A45EF1B53A26400C777E7 /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
+		186A45F01B53A26400C777E7 /* forwards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = forwards.h; sourceTree = "<group>"; };
+		186A45F11B53A26400C777E7 /* json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
+		186A45F21B53A26400C777E7 /* reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		186A45F31B53A26400C777E7 /* value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = value.h; sourceTree = "<group>"; };
+		186A45F41B53A26400C777E7 /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
+		186A45F71B53A26400C777E7 /* json_batchallocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_batchallocator.h; sourceTree = "<group>"; };
+		186A45F81B53A26400C777E7 /* json_internalarray.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_internalarray.inl; sourceTree = "<group>"; };
+		186A45F91B53A26400C777E7 /* json_internalmap.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_internalmap.inl; sourceTree = "<group>"; };
+		186A45FA1B53A26400C777E7 /* json_reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_reader.cpp; sourceTree = "<group>"; };
+		186A45FB1B53A26400C777E7 /* json_value.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_value.cpp; sourceTree = "<group>"; };
+		186A45FC1B53A26400C777E7 /* json_valueiterator.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_valueiterator.inl; sourceTree = "<group>"; };
+		186A45FD1B53A26400C777E7 /* json_writer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_writer.cpp; sourceTree = "<group>"; };
+		186A45FE1B53A26400C777E7 /* sconscript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sconscript; sourceTree = "<group>"; };
+		186A46061B53AEBC00C777E7 /* NS_SDKPlatform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NS_SDKPlatform.cpp; sourceTree = "<group>"; };
 		186A65C51B37A3BD002AF9A6 /* LoginBackScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginBackScene.h; sourceTree = "<group>"; };
 		186A65C61B37A3CC002AF9A6 /* LoginBackScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginBackScene.cpp; sourceTree = "<group>"; };
 		186A65C81B37A3DD002AF9A6 /* PayBackScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PayBackScene.cpp; sourceTree = "<group>"; };
@@ -229,7 +253,6 @@
 		18B635041B370DBF007B2926 /* NS_SDKPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NS_SDKPlatform.h; sourceTree = "<group>"; };
 		18B635061B370F9F007B2926 /* NS_SDKManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NS_SDKManager.h; sourceTree = "<group>"; };
 		18B635071B370FAE007B2926 /* NS_SDKManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NS_SDKManager.cpp; sourceTree = "<group>"; };
-		18B635091B371196007B2926 /* NS_SDKPlatformAndroid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NS_SDKPlatformAndroid.cpp; sourceTree = "<group>"; };
 		18D5BAE81B398D1F008387B7 /* JavaHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JavaHelper.cpp; sourceTree = "<group>"; };
 		18D5BAEA1B398D2D008387B7 /* JavaHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JavaHelper.h; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -292,9 +315,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		186A45EA1B53A26400C777E7 /* jsoncpp */ = {
+			isa = PBXGroup;
+			children = (
+				186A45EB1B53A26400C777E7 /* include */,
+				186A45F51B53A26400C777E7 /* src */,
+			);
+			path = jsoncpp;
+			sourceTree = "<group>";
+		};
+		186A45EB1B53A26400C777E7 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				186A45EC1B53A26400C777E7 /* json */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		186A45EC1B53A26400C777E7 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				186A45ED1B53A26400C777E7 /* autolink.h */,
+				186A45EE1B53A26400C777E7 /* config.h */,
+				186A45EF1B53A26400C777E7 /* features.h */,
+				186A45F01B53A26400C777E7 /* forwards.h */,
+				186A45F11B53A26400C777E7 /* json.h */,
+				186A45F21B53A26400C777E7 /* reader.h */,
+				186A45F31B53A26400C777E7 /* value.h */,
+				186A45F41B53A26400C777E7 /* writer.h */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		186A45F51B53A26400C777E7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				186A45F61B53A26400C777E7 /* lib_json */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		186A45F61B53A26400C777E7 /* lib_json */ = {
+			isa = PBXGroup;
+			children = (
+				186A45F71B53A26400C777E7 /* json_batchallocator.h */,
+				186A45F81B53A26400C777E7 /* json_internalarray.inl */,
+				186A45F91B53A26400C777E7 /* json_internalmap.inl */,
+				186A45FA1B53A26400C777E7 /* json_reader.cpp */,
+				186A45FB1B53A26400C777E7 /* json_value.cpp */,
+				186A45FC1B53A26400C777E7 /* json_valueiterator.inl */,
+				186A45FD1B53A26400C777E7 /* json_writer.cpp */,
+				186A45FE1B53A26400C777E7 /* sconscript */,
+			);
+			path = lib_json;
+			sourceTree = "<group>";
+		};
 		186A65CB1B37A892002AF9A6 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				186A45EA1B53A26400C777E7 /* jsoncpp */,
 				186A65CD1B37A892002AF9A6 /* AssetsManager */,
 				186A65D01B37A892002AF9A6 /* CCBReader */,
 				186A66051B37A892002AF9A6 /* cocos-ext.h */,
@@ -505,7 +584,7 @@
 				18B635041B370DBF007B2926 /* NS_SDKPlatform.h */,
 				18B635061B370F9F007B2926 /* NS_SDKManager.h */,
 				18B635071B370FAE007B2926 /* NS_SDKManager.cpp */,
-				18B635091B371196007B2926 /* NS_SDKPlatformAndroid.cpp */,
+				186A46061B53AEBC00C777E7 /* NS_SDKPlatform.cpp */,
 			);
 			path = SDKManager;
 			sourceTree = "<group>";
@@ -685,15 +764,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186A45FF1B53A26400C777E7 /* json_internalarray.inl in Resources */,
 				782F4619153FEDF0009FC2E5 /* Default.png in Resources */,
 				D4EF94E815BD319200D803EB /* Icon-57.png in Resources */,
+				186A46051B53A26400C777E7 /* sconscript in Resources */,
 				18B1EADE1B3849CA003201A8 /* control_normal.png in Resources */,
 				D4EF94EA15BD319500D803EB /* Icon-114.png in Resources */,
 				D4EF94EC15BD319B00D803EB /* Icon-72.png in Resources */,
 				D4EF94EE15BD319D00D803EB /* Icon-144.png in Resources */,
+				186A46031B53A26400C777E7 /* json_valueiterator.inl in Resources */,
 				D4E6BCC815FCB6AA008BF525 /* background-music-aac.wav in Resources */,
 				D4E6BCC915FCB6AA008BF525 /* hd in Resources */,
 				D4E6BCCA15FCB6AA008BF525 /* pew-pew-lei.wav in Resources */,
+				186A46001B53A26400C777E7 /* json_internalmap.inl in Resources */,
 				18B1EADF1B3849CA003201A8 /* control_selected.png in Resources */,
 				D4E6BCCB15FCB6AA008BF525 /* sd in Resources */,
 				D41A0AC6160F14F5004552AE /* Default-568h@2x.png in Resources */,
@@ -739,8 +822,10 @@
 				186A67841B37A892002AF9A6 /* CCData.cpp in Sources */,
 				186A678C1B37A892002AF9A6 /* CCNode+CCBRelativePositioning.cpp in Sources */,
 				18B635021B370CB4007B2926 /* NS_SDKFactory.cpp in Sources */,
-				18B6350A1B371196007B2926 /* NS_SDKPlatformAndroid.cpp in Sources */,
 				186A67871B37A892002AF9A6 /* CCLayerColorLoader.cpp in Sources */,
+				186A46021B53A26400C777E7 /* json_value.cpp in Sources */,
+				186A46071B53AEBC00C777E7 /* NS_SDKPlatform.cpp in Sources */,
+				186A46041B53A26400C777E7 /* json_writer.cpp in Sources */,
 				D4ABB4B313B4395300552E6E /* main.m in Sources */,
 				BF23D4E7143315EB00657E08 /* AppDelegate.cpp in Sources */,
 				186A677D1B37A892002AF9A6 /* CCBKeyframe.cpp in Sources */,
@@ -752,6 +837,7 @@
 				186A67851B37A892002AF9A6 /* CCLabelBMFontLoader.cpp in Sources */,
 				186A67861B37A892002AF9A6 /* CCLabelTTFLoader.cpp in Sources */,
 				BF23D4E8143315EB00657E08 /* HelloWorldScene.cpp in Sources */,
+				186A46011B53A26400C777E7 /* json_reader.cpp in Sources */,
 				18D5BAE91B398D1F008387B7 /* JavaHelper.cpp in Sources */,
 				186A678A1B37A892002AF9A6 /* CCMenuItemImageLoader.cpp in Sources */,
 				18B634C11B370A6E007B2926 /* SimpleAudioEngine.mm in Sources */,

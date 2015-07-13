@@ -2,8 +2,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_CFLAGS += -DDEBUG=1
-LOCAL_CFLAGS += -DNAME_SGZ15=1
+LOCAL_CFLAGS += -DNAME_MYGAME=1
 LOCAL_MODULE := game_shared
 
 LOCAL_MODULE_FILENAME := libcocos2dcpp

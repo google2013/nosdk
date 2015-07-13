@@ -11,8 +11,21 @@ public class CommonSDKManager extends Object{
 	private final int MSG_LOGIN = 0;
 	
 	private static CommonSDKManager instance = null;
-	private static SDKManager sdkManager = null;
-	private Handler mHandler = null;
+//	private static SDKManager sdkManager = null;
+	private Handler mHandler = new Handler() {
+		public void handleMessage(Message msg) {
+
+			switch (msg.what) {
+				case MSG_LOGIN: {
+					getSDKManager().goSDKLogin( loginCallback );
+//					SDKManager.getInstance().goSDKLogin(callback)Login( loginCallback );
+					break;
+				}
+			}
+			super.handleMessage(msg);
+		}
+	};
+	
 	private String payJson = "";
 	private ILoginCallback loginCallback = new ILoginCallback()
 	{
@@ -35,6 +48,7 @@ public class CommonSDKManager extends Object{
 			
 		}
 	};
+	
 	public static CommonSDKManager getInstance()
 	{
 		if( instance == null )
@@ -43,28 +57,20 @@ public class CommonSDKManager extends Object{
 		}
 		return instance;
 	}
+
+	public static void testJNI()
+	{
+		Log.d("TTT" , "TTTTTTT");
+	}
 	
 	public CommonSDKManager()
 	{
-		sdkManager = new SDKManager();
-		mHandler = new Handler() {
-			public void handleMessage(Message msg) {
 
-				switch (msg.what) {
-					case MSG_LOGIN: {
-						getSDKManager().goSDKLogin( loginCallback );
-	//					SDKManager.getInstance().goSDKLogin(callback)Login( loginCallback );
-						break;
-					}
-				}
-				super.handleMessage(msg);
-			}
-		};
 	}
 	
 	public SDKManager getSDKManager()
 	{
-		return sdkManager;
+		return SDKManager.getInstance();
 	}
 	public native void login( String json );
 	public native void logout();

@@ -132,13 +132,15 @@ void PayBackScene::menuPayCallback(cocos2d::CCObject* pSender, cocos2d::extensio
     CCControlButton* btn = (CCControlButton*)pSender;
     if( btn )
     {
-        NS_SDKFactory::getInstance()->getSDKPlatform()->setPay( btn->getTag() );
+        char buff[1024];
+        NS_SDKFactory::getInstance()->getSDKPlatform()->getPayInfo( btn->getTag() , buff );
+        NS_SDKFactory::getInstance()->getSDKPlatform()->setPay( buff );
     }
 }
 
 void PayBackScene::menuBackCallback(cocos2d::CCObject* pSender)
 {
-    //    char buf[1024];
+//        char buf[1024];
     CCDirector *pDirector = CCDirector::sharedDirector();
     CCScene *pScene = HelloWorld::scene();
     // run

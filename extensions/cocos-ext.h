@@ -41,6 +41,8 @@
 #include "network/HttpResponse.h"
 #include "network/HttpClient.h"
 
+#include "jsoncpp/include/json/json.h"
+
 //#include "CocoStudio/Armature/CCArmature.h"
 //#include "CocoStudio/Armature/CCBone.h"
 //#include "CocoStudio/Armature/animation/CCArmatureAnimation.h"

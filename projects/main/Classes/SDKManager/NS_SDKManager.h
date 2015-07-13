@@ -17,8 +17,7 @@ public:
     ~NS_SDKManager();
     
     void goNativeLogin( const char* str );
-    void getLoginInfo(const char* str);
-    void getPayInfo(float amount);
+    void getPayInfo(int type, char* outStr);
     
     void onLoginSuccess();
     void onPaySuccess();

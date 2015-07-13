@@ -53,6 +53,9 @@ network/WebSocket.cpp \
 physics_nodes/CCPhysicsDebugNode.cpp \
 physics_nodes/CCPhysicsSprite.cpp \
 LocalStorage/LocalStorageAndroid.cpp \
+jsoncpp/src/lib_json/json_reader.cpp \
+jsoncpp/src/lib_json/json_value.cpp \
+jsoncpp/src/lib_json/json_writer.cpp \
 
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dx_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocosdenshion_static
@@ -72,9 +75,15 @@ LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH) \
                            $(LOCAL_PATH)/GUI/CCScrollView \
                            $(LOCAL_PATH)/network \
                            $(LOCAL_PATH)/LocalStorage \
+                           $(LOCAL_PATH)/jsoncpp/include/json \
+                           $(LOCAL_PATH)/jsoncpp/src/lib_json \
 
 LOCAL_CFLAGS := -fexceptions
-                    
+
+LOCAL_C_INCLUDES := $(LOCAL_PATH) \
+$(LOCAL_PATH)/jsoncpp/include/json \
+$(LOCAL_PATH)/jsoncpp/src/lib_json \
+
 include $(BUILD_STATIC_LIBRARY)
 
 $(call import-module,cocos2dx)

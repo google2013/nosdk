@@ -40,5 +40,6 @@ NormalIncludefile=(
 
 #不需要的文件（在GameDir中）
 NormalExcludefile=(
+"../Classes/SDKManager/NS_SDKPlatform.cpp"
 
 )

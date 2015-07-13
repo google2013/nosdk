@@ -11,7 +11,7 @@
                 canDo="false"
                 for data in ${NormalExcludefile[@]}
                 do
-                    if [ $data == `basename $file` ]; then
+                    if [ $data == $file ]; then
                         canDo="true"
                     fi
                 done

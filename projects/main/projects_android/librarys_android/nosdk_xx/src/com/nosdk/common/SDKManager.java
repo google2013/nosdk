@@ -4,6 +4,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.util.Log;
 
 import com.flamingo.sdk.access.GPApiFactory;
 import com.flamingo.sdk.access.GPPayResult;
@@ -31,9 +32,6 @@ public class SDKManager implements ISDKManager {
 		public void onFinish(final GPUserResult result) {
         	JSONObject json_object = new JSONObject();
         	try {
-//				json_object.put("arg1", GPApiFactory.getGPApi().getLoginUin() );
-//				json_object.put("arg2", GPApiFactory.getGPApi().getLoginToken() );
-//				json_object.put("arg3", GPApiFactory.getGPApi().getAccountName() );
 			    String postinfo = "login_xxard?uid=";
 			    postinfo += GPApiFactory.getGPApi().getLoginUin();
 			    postinfo += "&sessionID=";
@@ -120,16 +118,15 @@ public class SDKManager implements ISDKManager {
 	public void setPay(String json) {
 		// TODO Auto-generated method stub
 //		roleName = jsonObject.getString("uname");
+		Log.d("TTT" , json );
 		try {
 			JSONObject jsonObject=new JSONObject(json);
-			amount = jsonObject.getInt("amount");
-			int serverID = jsonObject.getInt("serverid");
-//			String serverName = jsonObject.getString("servername");
-			int roleID = jsonObject.getInt("roleID");
-			payinfo = String.format("%d.%d.%d", serverID , roleID , System.currentTimeMillis() );
-//			payinfo = jsonObject.getString("payinfo");
-			
-//			String priceStr = String.format("%0.2f", amount);
+			amount = jsonObject.getInt("mount");
+			int serverID = 0;
+			int roleID = 2331;
+			payinfo = jsonObject.getString("payinfo");
+//			payinfo = String.format("%d.%d.%d", serverID , roleID , System.currentTimeMillis() );
+
 			GPSDKGamePayment payParam = new GPSDKGamePayment();
 			payParam.mItemName = amount + "元宝";
 			payParam.mPaymentDes = amount + "元宝";

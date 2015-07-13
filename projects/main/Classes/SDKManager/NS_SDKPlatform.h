@@ -17,7 +17,7 @@ public:
     
     void goLogin();
     void goLogout();
-    void setPay( int type );
+    void setPay( const char* info );
     void logout();
     
     void showCenter();
@@ -34,9 +34,10 @@ public:
     const char* getProjectID();
     
 private:
-    void callStringFunc( char* json , char* funcName );
+    void callStringFunc( const char* json , char* funcName );
     void callStringFunc2( char* funcName , const char* result);
     void callVoidFunc(  char* funcName );
+    void callVoidFunc2(  char* funcName );
     bool callBoolFunc(  char* funcName );
     int callIntFunc( char* funcName );
 };

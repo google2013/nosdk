@@ -24,6 +24,7 @@ public class SDKManager implements ISDKManager {
 	private String payinfo;
 	private Activity activity;
 	private Application application;
+	private ICommonSDKManager commonManager;
 	private ILoginCallback loginCallback;
     private static SDKManager instance;
 	private SDKTYPE m_nSDKType = SDKTYPE.TYPE_NORMAL;
@@ -71,9 +72,11 @@ public class SDKManager implements ISDKManager {
 		m_nSDKType = SDKTYPE.TYPE_XXARD;
 	}
 
-	public void initActivity( Activity act )
-	{
+	@Override
+	public void initActivity(Activity act, ICommonSDKManager instance) {
+		// TODO Auto-generated method stub
 		activity = act;
+		commonManager = instance;
 		// TODO 每个商家的appid和appkey，必须请求成功，才能用其他的功能。
 		// 如果失败，就不能调用登陆和支付等接口。
 		GPApiFactory.getGPApi().initSdk(activity, APP_ID, APP_KEY,
@@ -85,6 +88,7 @@ public class SDKManager implements ISDKManager {
 				});	
 	}
 	
+	@Override
 	public void initApplication( Application app )
 	{
 		application = app;
@@ -235,5 +239,11 @@ public class SDKManager implements ISDKManager {
 	public String getProjectID()
 	{
 		return APP_ID;
+	}
+
+	@Override
+	public void onDestroy() {
+		// TODO Auto-generated method stub
+		destroySDK( activity );
 	}
 }

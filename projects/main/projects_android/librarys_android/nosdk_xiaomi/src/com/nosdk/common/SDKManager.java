@@ -27,6 +27,7 @@ public class SDKManager implements ISDKManager {
 	private Application application;
 	private Activity activity;
 	private ILoginCallback loginCallback;
+	private ICommonSDKManager commonManager;
     private static SDKManager instance;
 	private SDKTYPE m_nSDKType = SDKTYPE.TYPE_NORMAL;
 	private boolean isLogined;
@@ -183,7 +184,7 @@ public class SDKManager implements ISDKManager {
 	}
 
 	@Override
-	public void destroySDK(Activity activity) {
+	public void destroySDK( Activity activity ) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -229,12 +230,6 @@ public class SDKManager implements ISDKManager {
 	}
 
 	@Override
-	public void initActivity(Activity act) {
-		// TODO Auto-generated method stub
-		activity = act;
-	}
-
-	@Override
 	public void initApplication(Application app) {
 		// TODO Auto-generated method stub
 		application = app;
@@ -245,5 +240,18 @@ public class SDKManager implements ISDKManager {
 		MiCommplatform.Init( app, appInfo );
 		
 //		DemoUtils.intiTestImg( app );
+	}
+
+	@Override
+	public void onDestroy() {
+		// TODO Auto-generated method stub
+		destroySDK( activity );
+	}
+
+	@Override
+	public void initActivity(Activity act, ICommonSDKManager instance) {
+		// TODO Auto-generated method stub
+		activity = act;
+		commonManager = instance;
 	}
 }

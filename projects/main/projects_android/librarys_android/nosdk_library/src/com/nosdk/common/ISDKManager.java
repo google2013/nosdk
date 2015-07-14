@@ -81,12 +81,13 @@ public interface ISDKManager {
 	public void destroySDK(Activity activity);
 	public void onStop();
 	public void onStart();
+	public void onDestroy();
 	///
 
 	///other
 	public String getProjectID();		//不同平台projectID不同，用来通知服务器
 	///
 	
-	public void initActivity( Activity act );
+	public void initActivity( Activity act , ICommonSDKManager instance);
 	public void initApplication( Application app );
 }

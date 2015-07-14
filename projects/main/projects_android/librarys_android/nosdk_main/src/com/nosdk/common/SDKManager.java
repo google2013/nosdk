@@ -22,6 +22,7 @@ public class SDKManager implements ISDKManager {
     private static SDKManager instance;
 	private SDKTYPE m_nSDKType = SDKTYPE.TYPE_NORMAL;
 	private boolean isLogined;
+	private ICommonSDKManager commonManager;
 	
     public static synchronized SDKManager getInstance() {  
         if (instance == null) {  
@@ -161,16 +162,23 @@ public class SDKManager implements ISDKManager {
 	}
 
 	@Override
-	public void initActivity(Activity act) {
-		// TODO Auto-generated method stub
-		activity = act;
-	}
-
-	@Override
 	public void initApplication(Application app) {
 		// TODO Auto-generated method stub
 		application = app;
 		
 //		DemoUtils.intiTestImg( app );
+	}
+
+	@Override
+	public void onDestroy() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void initActivity(Activity act, ICommonSDKManager instance) {
+		// TODO Auto-generated method stub
+		activity = act;
+		commonManager = instance;
 	}
 }

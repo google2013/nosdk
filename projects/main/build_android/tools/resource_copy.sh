@@ -60,15 +60,14 @@ mkdir "$APP_ANDROID_ROOT"/assets
 for file in "$APP_ROOT"/Resources/*
 do
 
-TempData=`echo ${file#*icon}`
-#若目录中还有icon字眼，则不拷贝
-if [ -d "$file" ] && [ "${TempData}" == "$file" ]; then
+if [ -d "$file" ]; then
     cp -rf "$file" "$APP_ANDROID_ROOT"/assets
 fi
 
 if [ -f "$file" ]; then
    cp "$file" "$APP_ANDROID_ROOT"/assets
 fi
+
 done
 
 if [ -d "$APP_ANDROID_ROOT"/backup/assets ]; then

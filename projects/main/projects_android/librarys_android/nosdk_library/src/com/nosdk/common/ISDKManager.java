@@ -1,6 +1,7 @@
 package com.nosdk.common;
 
 import android.app.Activity;
+import android.app.Application;
 
 public interface ISDKManager {
 	enum SDKTYPE
@@ -85,4 +86,7 @@ public interface ISDKManager {
 	///other
 	public String getProjectID();		//不同平台projectID不同，用来通知服务器
 	///
+	
+	public void initActivity( Activity act );
+	public void initApplication( Application app );
 }

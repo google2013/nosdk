@@ -15,7 +15,7 @@ cd "$5"
 if [ "${ISREFRESHMK_SET}" == "1" ]; then
     if [ -f "./platform_refresh.sh" ]; then
         echo -e "\033[31;1m开始刷新 Android.mk\033[0m"
-        source "./platform_refresh.sh"
+        source "./platform_refresh.sh" >> null
     fi
 fi
 

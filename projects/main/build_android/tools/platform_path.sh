@@ -12,7 +12,7 @@ fi
 
 PATH=$PATH:"$serchPath":"$serchPath/tools":"$serchPath/platform";
 #打包出来的路径
-out_path="/Users/crimoon/Desktop/apk"
+out_path=~/Desktop/apk
 #key文件在的路径
 key_path="/Users/crimoon/Documents/project_2/Project_TK/tools/androidpacker/"
 

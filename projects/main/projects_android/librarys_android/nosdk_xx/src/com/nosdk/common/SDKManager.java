@@ -4,6 +4,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.Application;
 import android.util.Log;
 
 import com.flamingo.sdk.access.GPApiFactory;
@@ -22,6 +23,7 @@ public class SDKManager implements ISDKManager {
 	private float amount;
 	private String payinfo;
 	private Activity activity;
+	private Application application;
 	private ILoginCallback loginCallback;
     private static SDKManager instance;
 	private SDKTYPE m_nSDKType = SDKTYPE.TYPE_NORMAL;
@@ -69,7 +71,7 @@ public class SDKManager implements ISDKManager {
 		m_nSDKType = SDKTYPE.TYPE_XXARD;
 	}
 
-	public void init( Activity act )
+	public void initActivity( Activity act )
 	{
 		activity = act;
 		// TODO 每个商家的appid和appkey，必须请求成功，才能用其他的功能。
@@ -81,6 +83,11 @@ public class SDKManager implements ISDKManager {
 						
 					}
 				});	
+	}
+	
+	public void initApplication( Application app )
+	{
+		application = app;
 	}
 	
 	@Override

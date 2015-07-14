@@ -2,8 +2,9 @@
 ##平台数据,需要更改
 ##############################################
 PLATFORMHONE_CHILD=()
-SDKDIR="proj.android"
+SDKDIR="game_normal"
 BUILDDIR="build_android"
+LIBRARYDIR="nosdk_main"
 TOOLSDIR="tools"
 PlatformTarget="libcocos2dcpp"
 PlatformName=""

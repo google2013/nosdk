@@ -1,60 +1,19 @@
-PRE_DIR="com/crimoon/common/"
 
-AndroidSRC=(
-"WeiboManager.java"
-"Util.java"
-"PushService.java"
-"PushMessageManager.java"
-"ProjectTKApp.java"
-"ProjectTK.java"
-"JavaToCppHelper.java"
-"CommonSdkManager.java"
-"AccessTokenKeeper.java"
-"WeChatSDkManager.java"
-"VideoView.java"
-)
-
-echo "${SDKDIR}" 
-echo "${SOURCEDIR}"
-
-for file in "${SDKDIR}"/*
+# copy resources
+for file in ../projects_android/${LIBRARYDIR}/*
 do
-    if [ -d $file ]; then
-        echo $file
-        localfile=`basename $file`
-        echo "rm -rf ./$localfile"
-        echo `pwd`
-        rm -rf ./$localfile
-        cp -R "${SDKDIR}"/$localfile ./
-        # source file_list.sh $1 $2
-    elif [ -f $file ]; then
-        echo $file
-        # echo $file
-        localfile=`basename $file`
-        rm -rf ./$localfile
-        cp -R "${SDKDIR}"/$localfile ./
+	echo "$file"
+    if [ -e "${file}" ] && [ "${file}" != "backup" ]; then
+        cp -rf  "$file" "./"
     fi
 done
-rm -rf ./src
-# rm -r ${ExternalDir}/*
-mkdir -p "./src/$PRE_DIR"
 
-for data in ${AndroidSRC[@]}
-do
-
-ISCOPY_TMP="1"
-for fname in ${EXINCLUDE_SRC[@]}
-do
-	if [ "$data" == "$fname" ]; then
-		echo "$data == $fname"
-		ISCOPY_TMP=0
-	fi
-done
-
-if [ "$ISCOPY_TMP" == "1" ]; then
- 	cp "${SRCDIR}/${PRE_DIR}${data}" "./src/$PRE_DIR"
+if [ -d ../projects_android/${LIBRARYDIR}/backup/assets ]; then
+    cp -R ../projects_android/${LIBRARYDIR}/backup/assets/* ./assets/
 fi
-done
 
-rm -rf ./bin
+
+if [ -d ../projects_android/${LIBRARYDIR}/backup/libs ]; then
+    cp -R ../projects_android/${LIBRARYDIR}/backup/libs/* ./libs/
+fi
 source ./platform_property.sh

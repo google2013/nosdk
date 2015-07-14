@@ -24,10 +24,10 @@
             # echo "Found the -c option"
             # echo "The parameter follow -c is $2"
             ISCOPYRESOURCE_SET="1"
-            if [ "$2" == "icon" ]; then
-                ISCOPYICON_SET="1"
-            fi
-            shift
+            # if [ "$2" == "icon" ]; then
+            #     ISCOPYICON_SET="1"
+            # fi
+            # shift
             ;;
         -p)
             ISPACKAGE_SET="1"

@@ -32,9 +32,7 @@ public class NoSDKMain extends Cocos2dxActivity{
 	
     protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-		CommonSDKManager.getInstance().getSDKManager().init( this );
-//		CommonSDKManager.getInstance().
-//		CommonSDKManager.getInstance().getSDKManager().init( this );
+		CommonSDKManager.getInstance().getSDKManager().initActivity( this );
 	}
 
     public Cocos2dxGLSurfaceView onCreateView() {

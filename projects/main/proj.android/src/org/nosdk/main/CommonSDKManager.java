@@ -57,11 +57,6 @@ public class CommonSDKManager extends Object{
 		}
 		return instance;
 	}
-
-	public static void testJNI()
-	{
-		Log.d("TTT" , "TTTTTTT");
-	}
 	
 	public CommonSDKManager()
 	{

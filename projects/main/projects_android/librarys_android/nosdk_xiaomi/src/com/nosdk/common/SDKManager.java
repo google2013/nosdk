@@ -6,7 +6,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Application;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.util.Log;
 
 import com.nosdk.common.ILoginCallback;
@@ -168,7 +172,25 @@ public class SDKManager implements ISDKManager {
 	@Override
 	public void onExit() {
 		// TODO Auto-generated method stub
-		
+		AlertDialog.Builder builder = new Builder( activity );
+		builder.setMessage("确定要退出吗?");
+		builder.setTitle("提示");
+		builder.setPositiveButton("确认",new android.content.DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.dismiss();
+				Intent home = new Intent(Intent.ACTION_MAIN);
+				home.addCategory(Intent.CATEGORY_HOME);
+				activity.startActivity(home);
+				activity.finish();
+			}
+		});
+		builder.setNegativeButton("取消",
+				new android.content.DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+					}
+		});
+		builder.create().show(); 
 	}
 
 	@Override

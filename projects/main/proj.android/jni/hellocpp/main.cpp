@@ -55,7 +55,7 @@ void Java_org_nosdk_main_CommonSDKManager_login(JNIEnv* env, jobject thiz,jstrin
 void Java_org_nosdk_main_CommonSDKManager_logout(JNIEnv* env, jobject thiz){
 
     CCScene *scene = CCDirector::sharedDirector()->getRunningScene();
-    CCAction *action = CCCallFunc::create(NS_SDKFactory::getInstance()->getSDKPlatform(),callfunc_selector(NS_SDKManager::goLogout));
+    CCAction *action = CCCallFunc::create(NS_SDKFactory::getInstance()->getSDKPlatform(),callfunc_selector(NS_SDKManager::logout));
     scene->runAction(action);
  }
 }

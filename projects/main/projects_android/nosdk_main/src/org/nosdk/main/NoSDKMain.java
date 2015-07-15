@@ -27,6 +27,8 @@ import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
 
 public class NoSDKMain extends Cocos2dxActivity{
 	
@@ -54,6 +56,16 @@ public class NoSDKMain extends Cocos2dxActivity{
 		
 	}
 	
+	@Override
+	public boolean onKeyDown(final int pKeyCode, final KeyEvent pKeyEvent) {
+		switch (pKeyCode) {
+			case KeyEvent.KEYCODE_BACK:
+				CommonSDKManager.getInstance().getSDKManager().onExit();
+				return true;
+			default:
+				return super.onKeyDown(pKeyCode, pKeyEvent);
+		}
+	}
 	
 	@Override
 	protected void onStop() { 

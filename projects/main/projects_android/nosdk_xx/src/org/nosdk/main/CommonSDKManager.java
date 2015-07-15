@@ -72,11 +72,19 @@ public class CommonSDKManager extends Object implements ICommonSDKManager{
 	public native void login( String json );
 	public native void logout();
 	
-	public void goCommonLogin( String json )
+	@Override
+	public void goCommonLogin()
 	{
-		login( json );
+		getSDKManager().goSDKLogin(loginCallback);
 	}
 
+	@Override
+	public void goDirectLogin( String json )
+	{
+//		getSDKManager().goSDKLogin(loginCallback);
+		login( json );
+	}
+	
 	@Override
 	public void goCommonLogout() {
 		// TODO Auto-generated method stub

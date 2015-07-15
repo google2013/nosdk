@@ -6,7 +6,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.app.Application;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.util.Log;
 
 import com.nosdk.common.ILoginCallback;
@@ -72,6 +76,20 @@ public class SDKManager implements ISDKManager {
 	@Override
 	public void setPay(String json) {
 		// TODO Auto-generated method stub
+		
+		
+        try {
+			JSONObject jsonObject=new JSONObject(json);
+			amount = jsonObject.getInt("mount");
+			int serverID = 0;
+			int roleID = 2331;
+			payinfo = jsonObject.getString("payinfo");
+//			payinfo = String.format("%d.%d.%d", serverID , roleID , System.currentTimeMillis() );
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e("TTT", e.getMessage(), e);
+        }
 	}
 
 	@Override
@@ -100,7 +118,25 @@ public class SDKManager implements ISDKManager {
 	@Override
 	public void onExit() {
 		// TODO Auto-generated method stub
-		
+		AlertDialog.Builder builder = new Builder( activity );
+		builder.setMessage("确定要退出吗?");
+		builder.setTitle("提示");
+		builder.setPositiveButton("确认",new android.content.DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.dismiss();
+				Intent home = new Intent(Intent.ACTION_MAIN);
+				home.addCategory(Intent.CATEGORY_HOME);
+				activity.startActivity(home);
+				activity.finish();
+			}
+		});
+		builder.setNegativeButton("取消",
+				new android.content.DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+					}
+		});
+		builder.create().show(); 
 	}
 
 	@Override

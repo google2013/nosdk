@@ -1,5 +1,5 @@
-APPNAME="sgz15"
-APP_ANDROID_NAME="net.crimoon.sgz15"
+APPNAME="mygame"
+APP_ANDROID_NAME="org.nosdk.main"
 SDK_ROOT="$HOME/Downloads/android-sdk-macosx"
 NDK_ROOT="$HOME/Downloads/android-ndk-r8d"
 

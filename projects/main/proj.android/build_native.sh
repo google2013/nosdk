@@ -1,5 +1,5 @@
-APPNAME="sgz15_wdj"
-APP_ANDROID_NAME="net.crimoon.sgz15_wdj"
+APPNAME="mygame"
+APP_ANDROID_NAME="org.nosdk.main"
 SDK_ROOT="$HOME/Documents/program/android-sdk-macosx"
 NDK_ROOT="$HOME/Documents/program/android-ndk-r9d"
 

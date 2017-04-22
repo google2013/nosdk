@@ -4,7 +4,6 @@
 #include <jni.h>
 #include <iostream>
 #include <string>
-#include <android/log.h>
 
 using namespace std;
 

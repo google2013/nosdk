@@ -1,8 +1,13 @@
 package com.sdk.common;
 
+import android.util.Log;
+
 public class SDKManager 
 {
 	private static SDKManager instance = null;
+
+	final String TAG = "Sample";
+	final String CHANNEL = "Default";
 	
 	public static SDKManager getInstance()
 	{
@@ -25,41 +30,45 @@ public class SDKManager
 	
 	public void init(String param)
 	{
-
+		Log.d(TAG, "init");
 	}
 
 	public void login(String param)
 	{
-
+		Log.d(TAG, "login");
+		onLoginResult("");
 	}
 
 	public void switchAccount(String param)
 	{
-
+		Log.d(TAG, "switchAccount");
+		onLoginResult("");
 	}
 
 	public void logout(String param)
 	{
-
+		Log.d(TAG, "logout");
+		onLogout("");
 	}
 
 	public String getChannel()
 	{
-		return "test";
+		return CHANNEL;
 	}
 
 	public void pay(String param)
 	{
-
+		Log.d(TAG, "pay");
+		onPayResult("");
 	}
 
 	public void exit(String param)
 	{
-
+		Log.d(TAG, "exit");
 	}
 
 	public void sendExtraData(String param)
 	{
-
+		Log.d(TAG, "sendExtraData");
 	}
 }

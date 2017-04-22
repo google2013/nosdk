@@ -21,54 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
-package	com.sdk.common;
-
-import android.app.Activity;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.KeyEvent;
+package	com.sdk.sample;
 
 public class MainActivity extends Activity{
-	
-    protected void onCreate(Bundle savedInstanceState){
-		super.onCreate(savedInstanceState);
-		SDKManager.getInstance().onInit("");
-		SDKManager.getInstance().init("");
-	}
-
-    static {
-        System.loadLibrary("sample");
-    } 
-    
-	@Override
-	protected void onResume() { 
-		super.onResume(); 		
-	}
-	
-	@Override
-	public boolean onKeyDown(final int pKeyCode, final KeyEvent pKeyEvent) {
-		switch (pKeyCode) {
-			case KeyEvent.KEYCODE_BACK:
-				SDKManager.getInstance().exit("");
-				return true;
-			default:
-				return super.onKeyDown(pKeyCode, pKeyEvent);
-		}
-	}
-	
-	@Override
-	protected void onStop() { 
-		super.onStop();
-	}
-	
-	@Override
-	protected void onPause() { 
-		super.onPause();
-	}
-	
-	@Override
-	protected void onDestroy() { 
-		super.onDestroy();
-	}
-	
 }

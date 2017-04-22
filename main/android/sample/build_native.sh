@@ -51,10 +51,10 @@ echo "$*"
 
 if [[ "$buildexternalsfromsource" ]]; then
     echo "Building external dependencies from source"
-    "$NDK_ROOT"/ndk-build -j4 -C "$APP_ANDROID_ROOT"
+    "$NDK_ROOT"/ndk-build -j4 -C "$APP_ANDROID_ROOT" "NDK_MODULE_PATH=${APP_ANDROID_ROOT}/../ui/"
 else
     echo "Using prebuilt externals"
-    "$NDK_ROOT"/ndk-build -j4 -C "$APP_ANDROID_ROOT"
+    "$NDK_ROOT"/ndk-build -j4 -C "$APP_ANDROID_ROOT" "NDK_MODULE_PATH=${APP_ANDROID_ROOT}/../ui/"
 fi
 
 if [ -d "$APP_ANDROID_ROOT"/backup/libs ]; then

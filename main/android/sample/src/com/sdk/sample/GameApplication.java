@@ -1,4 +1,4 @@
-package com.sdk.common;
+package com.sdk.sample;
 
 import android.app.Application;
 

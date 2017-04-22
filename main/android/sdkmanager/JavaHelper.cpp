@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "JavaHelper.h"
+#include <android/log.h>
 
 #define  LOG_TAG    "JavaHelper"
 #define  LOGD(...)  __android_log_print(ANDROID_LOG_DEBUG,LOG_TAG,__VA_ARGS__)
@@ -58,7 +59,8 @@ void JavaHelper::callStringFunction1(const char* functionName, const char* data)
     jmethodID getInstanceMethodID = jniEnv->GetStaticMethodID(classID, "getInstance", "()Lcom/sdk/common/SDKManager;");
     jobject sdkManager = jniEnv->CallStaticObjectMethod(classID, getInstanceMethodID);
     jmethodID functionMethodID = jniEnv->GetMethodID(classID, functionName, "(Ljava/lang/String;)V");
-    jniEnv->CallObjectMethod(sdkManager, functionMethodID, jniEnv->NewStringUTF(data));
+    jstring jstr = jniEnv->NewStringUTF(data);
+    jniEnv->CallVoidMethod(sdkManager, functionMethodID, jstr);
 }
 
 const char* JavaHelper::callStringFunction2(const char* functionName)

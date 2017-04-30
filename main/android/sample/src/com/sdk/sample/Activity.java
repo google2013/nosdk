@@ -8,7 +8,7 @@ public class Activity extends android.app.Activity {
 
     protected Activity() {
         System.loadLibrary("sample");
-        SDKManager.getInstance().onInit("");
+        SDKManager.getInstance().init(this);
         construct();
     }
     private native void construct();
